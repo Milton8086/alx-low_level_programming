@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints the alphabet in lowercase followed by a new line,except q & e
+ * main - prints the alphabet in lowercase except q & e
+ *
  * Return: Always 0
  */
 int main(void)
@@ -14,6 +15,6 @@ int main(void)
 			putchar(la);
 	}
 
-	putchar('\n')
+	putchar('\n');
+
 	return (0);
-}
