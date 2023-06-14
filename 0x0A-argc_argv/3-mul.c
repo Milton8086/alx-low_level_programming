@@ -19,7 +19,7 @@ int main(int argCount, char *argValues[])
 	{
 		num1 = atoi(argValues[1]);
 		num2 = atoi(argValues[2]);
-	       	result = num1 * num2;
+		result = num1 * num2;
 
 		printf("%d\n", result);
 
@@ -27,7 +27,8 @@ int main(int argCount, char *argValues[])
 	}
 	else
 	{
-		printf("error\n");
+		printf("Error\n");
+
 		return (1);
 	}
 }
