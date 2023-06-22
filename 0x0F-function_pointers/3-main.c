@@ -2,6 +2,7 @@
 #include "function_pointers.h"
 #include <stdlib.h>
 #include "3-calc.h"
+#include <unistd.h>
 
 /**
  * main-print the result of operations.
@@ -11,11 +12,10 @@
  * Return :0 success
  */
 
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__))argc, char *argv[])
 {
 	int x, y;
-	int result;
-	int (*op_func)(int, int);
+	char *op;
 
 	if (argc != 4)
 	{
@@ -24,20 +24,22 @@ int main(int argc, char *argv[])
 	}
 
 	x = atoi(argv[1]);
+	op = argv[2];
 	y = atoi(argv[3]);
 
-
-	op_func = *get_op_func(argv[2]);
-
-
-	if (op_func == NULL)
+	if ((get_op_func(op) == NULL || op[1] != '\0'))
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 
-	result = op_func(x, y);
+	if ((*op == '\\' && y == 0) || (*op == '%' && y == 0))
+	{
+		printf("Error\n");
+		exit(98);
+	}
 
-	printf("%d\n", result);
+	printf("%d\n",get_op_func(op)(x, y));
 	return (0);
+	}
 }

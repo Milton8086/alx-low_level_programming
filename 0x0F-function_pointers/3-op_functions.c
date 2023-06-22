@@ -26,7 +26,7 @@ int op_add(int a, int b)
 /**
  * op_sub: returns the difference of a and b
  *
- * @a: first number 
+ * @a: first number.
  * @b: second number
  *
  * Return: the difference.
@@ -42,7 +42,7 @@ int op_sub(int a, int b)
 
 /**
  * op_mul- returns the product of a and b.
- * @a : the first number 
+ * @a : the first number.
  * @b :the second number
  *
  * Result:the product of multiplying a and b.
@@ -50,14 +50,14 @@ int op_sub(int a, int b)
 
 int op_mul(int a, int b)
 {
-	int result =( a * b);
+	int result = (a * b);
 
 	return (result);
 }
 
 /**
  * op_div: returns the result of the division of a by b
- * @a : the first number 
+ * @a : the first number.
  * @b : the second number.
  *
  * Result: result of diving a and b.
@@ -65,7 +65,7 @@ int op_mul(int a, int b)
 
 int op_div(int a, int b)
 {
-	int result = (a/b);
+	int result = (a / b);
 
 	return (result);
 }
