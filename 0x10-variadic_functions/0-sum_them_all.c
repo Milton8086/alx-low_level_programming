@@ -3,17 +3,17 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all-Returns a function that returns the sum of all its parameters.
- * n:the number to be entered.
+ * sum_them_all - Returns a function that returns the sum of parameters.
+ * @n:the number to be entered.
  * @...: the variable.
  *
- * Return:If n == 0, return 0.
+ * Return:Returns the sum  of all the parameters,if n is 0;returns 0.
  *
  */
 
 int sum_them_all(const unsigned int n, ...)
 {
-	va_list_ap;
+	va_list ap;
 	unsigned int x, sum = 0;
 
 	va_start(ap, n);
