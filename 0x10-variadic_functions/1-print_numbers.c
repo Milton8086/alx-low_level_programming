@@ -3,10 +3,10 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - Returns a function that prints numbers.
+ * print_numbers - Prints numbers.
  * @n: the number of integers passed to the function.
  * @separator: the string to be printed between numbers.
- * @..: a variable of numbers to be printed.
+ * @... : a variable of numbers to be printed.
  *
  */
 
